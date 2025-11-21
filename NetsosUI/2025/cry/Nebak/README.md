@@ -1,9 +1,13 @@
-##Judul Soal
+## Judul Soal
 
-#Description
+# Description
+dbaihdiwhfioewhowghoih4
 
-#Attachment
+# Attachment
+[attachment](chall.py)
 
-#Solver
+# Solver
+[solver](solve.py)
 
-#POC/ Writeup
+# POC/ Writeup
+asbfishaiowhfioqhfioq
