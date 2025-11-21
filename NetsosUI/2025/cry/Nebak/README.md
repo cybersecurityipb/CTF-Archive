@@ -10,4 +10,5 @@ dbaihdiwhfioewhowghoih4
 [solver](solve.py)
 
 ## POC/ Writeup
+Solved by Ji4xuu
 asbfishaiowhfioqhfioq
