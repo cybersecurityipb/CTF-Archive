@@ -37,6 +37,7 @@ di ECDSA, Signature ($s$) digenerate dengan $s \equiv k^{-1}(z + r \cdot d) \pmo
 Karena nonce reuse, dari sig1 dan sig2 diperoleh :
 1. $s_1 \cdot k \equiv z_1 + r \cdot d \pmod n$
 2. $s_2 \cdot k \equiv z_2 + r \cdot d \pmod n$
+
 Kurangkan (1) dan (2) diperoleh :
 
 $$k \equiv (s_1 - s_2)^{-1} (z_1 - z_2) \pmod n$$
