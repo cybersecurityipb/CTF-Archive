@@ -1,0 +1,5 @@
+Category: Misc
+Points  : 384
+----------------------------------------
+
+print(flag) in 8chars or less, without alphanumeric.

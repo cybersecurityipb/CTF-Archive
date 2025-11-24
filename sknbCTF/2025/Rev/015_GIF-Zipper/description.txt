@@ -1,0 +1,6 @@
+Category: Rev
+Points  : 100
+----------------------------------------
+
+GIFファイルを暗号化してみた！秘密の情報を隠したし誰も見ないで欲しいな...
+I encrypted .gif! I hid some secret,so I wish no one sees it...

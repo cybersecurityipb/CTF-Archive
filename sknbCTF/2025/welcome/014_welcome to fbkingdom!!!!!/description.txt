@@ -1,0 +1,12 @@
+Category: welcome
+Points  : 100
+----------------------------------------
+
+Welcome to sknbCTF 2025!
+
+
+We are sknb Fubuki Shirakami fans.
+
+
+Flag is in [discord server](https://discord.gg/wexgYd32).
+Lets fun!
