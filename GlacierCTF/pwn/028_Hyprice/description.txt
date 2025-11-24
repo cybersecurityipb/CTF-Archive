@@ -1,0 +1,7 @@
+Category: pwn
+Points  : 499
+----------------------------------------
+
+A gamified dotfile manager that doesn't sacrifice on its looks.
+
+`nc challs.glacierctf.com 13378`

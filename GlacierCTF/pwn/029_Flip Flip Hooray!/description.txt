@@ -1,0 +1,9 @@
+Category: pwn
+Points  : 448
+----------------------------------------
+
+arm64 latest kernel + KASLR + 1 blind bitflip -> root
+
+Fun isn't it?
+
+`nc challs.glacierctf.com 13389`

@@ -1,0 +1,7 @@
+Category: rev
+Points  : 496
+----------------------------------------
+
+
+`nc challs.glacierctf.com 13392`
+Our rev guy: Idk, just decrypt the file.

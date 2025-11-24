@@ -1,0 +1,5 @@
+Category: intro
+Points  : 50
+----------------------------------------
+
+Introductory rev challenge

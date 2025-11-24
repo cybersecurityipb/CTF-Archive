@@ -1,0 +1,7 @@
+Category: pwn
+Points  : 500
+----------------------------------------
+
+Client+Server from C2, now pwn the server. :^)
+
+`nc challs.glacierctf.com 13393`

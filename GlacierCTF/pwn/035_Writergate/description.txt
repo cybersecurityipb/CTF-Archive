@@ -1,0 +1,8 @@
+Category: pwn
+Points  : 494
+----------------------------------------
+
+Now that you can stay above the drama, take in this familiar setting and
+pop yourself a shell if you can.
+
+`nc challs.glacierctf.com 13390`

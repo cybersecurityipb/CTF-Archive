@@ -1,0 +1,13 @@
+Category: misc
+Points  : 50
+----------------------------------------
+
+1. Kevin joined our company.
+2. Kevin took a shit on the carpet.
+3. Kevin git reseted --hard the entire repo.
+4. Kevin force pushed.
+5. Kevin left the company.
+
+Now its your turn to fix the mess. You get the compressed disk with the repository.
+
+Note: the repo is completely safe

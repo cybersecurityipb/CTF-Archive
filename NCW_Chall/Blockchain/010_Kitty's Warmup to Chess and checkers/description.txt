@@ -1,0 +1,10 @@
+Category: Blockchain
+Points  : 100
+----------------------------------------
+
+an easy introductional warm up to chess and checkers
+
+author: eyes
+
+
+http://31.97.187.222:48212/

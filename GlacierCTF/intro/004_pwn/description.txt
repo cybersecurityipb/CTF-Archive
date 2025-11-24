@@ -1,0 +1,7 @@
+Category: intro
+Points  : 50
+----------------------------------------
+
+Introductory pwn challenge
+
+`nc challs.glacierctf.com 13388`

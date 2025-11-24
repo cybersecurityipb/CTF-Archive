@@ -1,0 +1,7 @@
+Category: misc
+Points  : 50
+----------------------------------------
+
+It's not DNS. There's no way it's DNS. It was DNS.
+
+`nc challs.glacierctf.com 13381`

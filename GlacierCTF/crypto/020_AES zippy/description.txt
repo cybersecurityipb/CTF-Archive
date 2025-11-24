@@ -1,0 +1,9 @@
+Category: crypto
+Points  : 168
+----------------------------------------
+
+Our AES encryption service is zippy fast! 
+Just provide your plaintext and nonce. 
+BUT no nonsense allowed, we track everything.
+
+`nc challs.glacierctf.com 13373`

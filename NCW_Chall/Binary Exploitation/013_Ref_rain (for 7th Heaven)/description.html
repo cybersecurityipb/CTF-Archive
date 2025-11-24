@@ -1,0 +1,209 @@
+<p><strong>Category:</strong> Binary Exploitation<br><strong>Points:</strong> 500</p>
+<hr/>
+<style>
+    #prism-bsod-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #00008B;
+        color: white;
+        font-family: 'Consolas', 'Lucida Console', 'Courier New', monospace;
+        z-index: 99999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2em;
+        box-sizing: border-box;
+        opacity: 1;
+        transition: opacity 0.5s ease-out;
+    }
+
+    #prism-bsod-overlay .bsod-content {
+        max-width: 800px;
+        width: 90%;
+    }
+
+    #prism-bsod-overlay .bsod-smiley {
+        font-size: 8em;
+        font-weight: 200;
+        margin: 0;
+        line-height: 1;
+        padding-bottom: 0.2em;
+    }
+
+    #prism-bsod-overlay p {
+        font-size: 1.25em;
+        line-height: 1.5;
+        margin: 1.2em 0;
+    }
+
+    #prism-bsod-overlay code {
+        background-color: rgba(0,0,0,0.2);
+        padding: 2px 5px;
+        border-radius: 3px;
+    }
+
+    .prism-glitch-enter {
+        animation: prism-glitch 0.9s linear;
+    }
+
+    @keyframes prism-glitch {
+        0%   { transform: none; opacity: 1; }
+        10%  { transform: translate(2px, -2px) skewX(2deg); opacity: 0.8; }
+        20%  { transform: translate(-3px, 1px) skewX(-3deg); opacity: 1; }
+        30%  { transform: translate(3px, 0) skewX(4deg); opacity: 0.7; }
+        40%  { transform: translate(-2px, 2px) skewX(-2deg); opacity: 1; }
+        50%  { transform: translate(4px, -1px) skewX(3deg); opacity: 0.85; }
+        60%  { transform: translate(-4px, 1px) skewX(-4deg); opacity: 1; }
+        70%  { transform: translate(1px, -3px) skewX(2deg); opacity: 0.75; }
+        80%  { transform: translate(-1px, 2px) skewX(-1deg); opacity: 1; }
+        90%  { transform: translate(2px, 0) skewX(1deg); opacity: 0.9; }
+        100% { transform: none; opacity: 1; }
+    }
+
+    #prism-video-container {
+        display: none;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .prism-video-wrapper {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+    }
+
+    .prism-video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    #prism-author {
+        margin-top: 0.75em;
+        font-size: 0.95em;
+        opacity: 0.9;
+    }
+</style>
+
+<div id="prism-bsod-overlay">
+    <div class="bsod-content">
+        <p class="bsod-smiley">:(</p>
+        <p>
+            PRiSM system ran into a problem and needs to restart. We're<br>
+            just collecting fragments and errors, and then we'll restart<br>
+            for you.
+        </p>
+        <p style="font-size: 1em;">
+            You need the key to access emotions:<br>
+            <code>PRiSM_INITIALIZATION[KALEIDXSCOPE]_FAILED</code>
+        </p>
+        <p>
+            Problems with the prism system should be restarted. We collect fragments and errors. Then automatically
+            Start again. (<span id="prism-progress-percent">0</span>% complete)
+        </p>
+    </div>
+</div>
+
+<div id="prism-video-container">
+    <div class="prism-video-wrapper">
+        <iframe
+            id="youtube-player"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/-3wzWwhHW3g?controls=0&loop=1&playlist=-3wzWwhHW3g"
+            title="Challenge Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+    <p id="prism-author">Author: MikiMiku</p>
+</div>
+
+<audio id="prism-glitch-audio" src="https://www.myinstants.com/media/sounds/error-glitch.mp3" preload="auto"></audio>
+
+<script>
+    (function() {
+        const bsodOverlay = document.getElementById('prism-bsod-overlay');
+        const videoContainer = document.getElementById('prism-video-container');
+        const progressPercent = document.getElementById('prism-progress-percent');
+        const youtubePlayer = document.getElementById('youtube-player');
+        const glitchAudio = document.getElementById('prism-glitch-audio');
+
+        let progress = 0;
+        const loadingSpeed = 45;
+        let loadingInterval;
+
+        const haltPercentsSet = new Set();
+        while (haltPercentsSet.size < 3) {
+            const val = Math.floor(Math.random() * 99) + 1;
+            haltPercentsSet.add(val);
+        }
+        const haltPercents = Array.from(haltPercentsSet).sort(function(a, b) { return a - b; });
+
+        const haltDurations = haltPercents.map(function() {
+            return Math.random() * (2 - 0.5) + 0.5;
+        });
+
+        let haltIndex = 0;
+
+        const tickLoading = function() {
+            progress++;
+
+            if (progress <= 100) {
+                progressPercent.textContent = progress;
+
+                if (haltIndex < haltPercents.length && progress === haltPercents[haltIndex]) {
+                    const currentDurationSeconds = haltDurations[haltIndex];
+                    haltIndex++;
+
+                    clearInterval(loadingInterval);
+
+                    setTimeout(function() {
+                        loadingInterval = setInterval(tickLoading, loadingSpeed);
+                    }, currentDurationSeconds * 1000);
+                }
+            } else {
+                clearInterval(loadingInterval);
+                bsodOverlay.style.opacity = '0';
+
+                setTimeout(function() {
+                    bsodOverlay.style.display = 'none';
+                    videoContainer.style.display = 'block';
+                    youtubePlayer.src += "&autoplay=1";
+                }, 500);
+            }
+        };
+
+        const startLoading = function() {
+            loadingInterval = setInterval(tickLoading, loadingSpeed);
+        };
+
+        const glitchDuration = 900;
+
+        const playGlitchSound = function() {
+            if (!glitchAudio) return;
+            glitchAudio.currentTime = 0;
+            const playPromise = glitchAudio.play();
+            if (playPromise && typeof playPromise.then === 'function') {
+                playPromise.catch(function() {});
+            }
+        };
+
+        bsodOverlay.classList.add('prism-glitch-enter');
+        playGlitchSound();
+
+        setTimeout(function() {
+            bsodOverlay.classList.remove('prism-glitch-enter');
+            startLoading();
+        }, glitchDuration);
+    })();
+</script>

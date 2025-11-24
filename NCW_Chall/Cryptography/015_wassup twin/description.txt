@@ -1,0 +1,7 @@
+Category: Cryptography
+Points  : 100
+----------------------------------------
+
+こんにちは twin, 我创建了一个简单的 chall for you twin. The challenge is not 壊れた twin. Ok 안녕히 가세요 twin
+
+author: Auric

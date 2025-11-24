@@ -1,0 +1,16 @@
+Category: welcome
+Points  : 50
+----------------------------------------
+
+Welcome to GlacierCTF 2025 :)
+
+- Discord: https://discord.gg/DFYnRAME23
+- Rules: https://play.glacierctf.com/rules
+- Flag format: `gctf{.*}`, like `gctf{a2e3c428_w3lcome_t0_GlacierCTF_2025_0877b2e3}`
+- CTFTime: https://ctftime.org/event/2714
+
+If it's your first CTF, we recommend to start with the challenges from the `intro` category.
+
+Do not post any solutions until the CTF event ends. We will announce it. Do not send/receive flags/solutions/hints from other teams during the CTF.
+
+To ask something privately, use the `#support` Discord channel, press the `Open a ticket!` button.

@@ -1,0 +1,62 @@
+Category: Binary Exploitation
+Points  : 500
+----------------------------------------
+
+
+
+
+
+
+
+:(
+
+
+
+            PRiSM system ran into a problem and needs to restart. We're
+
+            just collecting fragments and errors, and then we'll restart
+
+            for you.
+        
+
+
+
+            You need the key to access emotions:
+
+
+PRiSM_INITIALIZATION[KALEIDXSCOPE]_FAILED
+
+
+
+
+
+            Problems with the prism system should be restarted. We collect fragments and errors. Then automatically
+            Start again. (
+0
+% complete)
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hint 1 : The binary is compiled with musl libc to be able to run it please install the libraries with "sudo apt instal musl musl-tools".
+Hint 2 : Saya sarankan untuk membaca ini untuk mencari inspirasi:
+https://elixir.bootlin.com/musl/v1.2.5/source/src/malloc/mallocng/free.c#L101
+https://elixir.bootlin.com/musl/v1.2.5/source/src/malloc/mallocng/malloc.c#L299
+
+
+Author: MikiMiku
+
+
+
+
+

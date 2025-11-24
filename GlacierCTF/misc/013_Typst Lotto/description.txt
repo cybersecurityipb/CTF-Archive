@@ -1,0 +1,7 @@
+Category: misc
+Points  : 436
+----------------------------------------
+
+Let's play typst lottery!
+
+`nc challs.glacierctf.com 13383`

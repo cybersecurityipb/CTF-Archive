@@ -1,0 +1,35 @@
+Category: Cryptography
+Points  : 100
+----------------------------------------
+
+⚠️ WARNING ⚠️
+
+cryptographic goo has leaked into the mainframe  
+絶対に意味わからんってマジで  
+absolutely no clue what's going on  
+bro we opened the server logs and got jumpscared by raw hex 💀  
+旗がAESスライム化されたんだが??🧪🔒  
+clean this mess pls 😭 助けて～～  
+
+────────────────────────────────
+
+context (for the brave):  
+• each entry originally looked like:
+
+  `log-####: event stream entry #i`  
+• but the archive only preserved:
+
+  `Record 
+ [ sha256(msg), r, s ]`  
+  (whatever “tag” is, the dev was mentally on airplane mode)
+
+also:  
+• encryption gremlin decided the final flag should be stored as:
+
+  AES-ECB( SHA256(d), flag )  
+  idk man 💀 blame the intern  
+• dev note left behind simply reads:
+
+  “67 is lucky, keep it.”
+
+author: kavakoss

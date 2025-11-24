@@ -1,0 +1,30 @@
+Category: web
+Points  : 50
+----------------------------------------
+
+2024 called and want back their casual websites, where you need to manually
+navigate through the page. This year, we introduce Glacier AI Store, where we
+use AI to navigate a website. Never browse through sub-sub-sub navigation bars
+again. Check out our new products. We apologize again to those customers, who
+paid for products but couldn't see them in their order list. We hired the best
+PHP vibe coders on the market and resolved the issue.
+
+https://glacier-ai-store.web.glacierctf.com
+
+https://glacier-ai-store2.web.glacierctf.com
+
+https://glacier-ai-store-mult-0.web.glacierctf.com/
+
+https://glacier-ai-store-mult-1.web.glacierctf.com/
+
+https://glacier-ai-store-mult-2.web.glacierctf.com/
+
+https://glacier-ai-store-mult-3.web.glacierctf.com/
+
+https://glacier-ai-store-mult-4.web.glacierctf.com/
+
+https://glacier-ai-store-mult-5.web.glacierctf.com/
+
+https://glacier-ai-store-mult-6.web.glacierctf.com/
+
+https://glacier-ai-store-mult-7.web.glacierctf.com/
